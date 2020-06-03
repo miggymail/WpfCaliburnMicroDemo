@@ -54,15 +54,15 @@ namespace WpfUI
 
         public bool CanClearText(string firstname, string lastname)
         {
-            //return string.IsNullOrWhiteSpace(FirstName) || string.IsNullOrWhiteSpace(LastName);
-            if (string.IsNullOrWhiteSpace(firstname) && string.IsNullOrWhiteSpace(lastname))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return !string.IsNullOrWhiteSpace(firstname) || !string.IsNullOrWhiteSpace(lastname);
+            //if (string.IsNullOrWhiteSpace(firstname) && string.IsNullOrWhiteSpace(lastname))
+            //{
+            //    return false;
+            //}
+            //else
+            //{
+            //    return true;
+            //}
         }
         public void ClearText(string firstname, string lastname)
         {
@@ -78,15 +78,5 @@ namespace WpfUI
         {
             ActivateItem(new SecondChildViewModel());
         }
-
-        //public bool CanSayHello
-        //{
-        //    get { return !string.IsNullOrWhiteSpace(FirstName); }
-        //}
-
-        //public void SayHello()
-        //{
-        //    MessageBox.Show(string.Format("Hello {0}!", FirstName)); //Don't do this in real life :)
-        //}
     }
 }
