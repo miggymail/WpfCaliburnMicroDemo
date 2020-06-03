@@ -18,7 +18,6 @@ namespace WpfUI
                 _firstname = value;
                 NotifyOfPropertyChange(() => FirstName);
                 NotifyOfPropertyChange(() => FullName);
-                //NotifyOfPropertyChange(() => CanSayHello);
             }
         }
 
